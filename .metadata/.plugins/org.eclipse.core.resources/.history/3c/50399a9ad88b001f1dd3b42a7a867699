@@ -1,0 +1,14 @@
+package week01;
+
+public class Driver {
+
+    public static void main(String[] args) {
+        // Create a Rectangle object
+        Rectangle rectangle = new Rectangle(2, 3);  // Use Rectangle constructor directly
+        System.out.println("Area of Rectangle: " + rectangle.getArea());
+        
+        // Create a Circle object
+        Circle circle = new Circle(5);  // Use Circle constructor directly
+        System.out.println("Area of Circle: " + circle.getArea());
+    }
+}

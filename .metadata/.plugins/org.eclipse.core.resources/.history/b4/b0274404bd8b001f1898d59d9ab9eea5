@@ -1,0 +1,43 @@
+package week01;
+
+public abstract class Rectangle extends Shape {
+	
+	private int length;
+	public int getLength() {
+		return length;
+	}
+
+	public void setLength(int length) {
+		this.length = length;
+	}
+
+	public int getBreadth() {
+		return breadth;
+	}
+
+	public void setBreadth(int breadth) {
+		this.breadth = breadth;
+	}
+
+	private int breadth;
+	
+	public Rectangle(int length, int breadth) {
+		super(4);
+		this.length = length;
+		this.breadth = breadth;
+	}
+	
+	@Override
+	public int getArea(){
+		return length * breadth;
+	}
+
+	@Override
+	public String toString() {
+		return "Rectangle [length=" + length + ", breadth=" + breadth + ", getLength()=" + getLength()
+				+ ", getBreadth()=" + getBreadth() + ", getArea()=" + getArea() + ", getSides()=" + getSides()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+
+}

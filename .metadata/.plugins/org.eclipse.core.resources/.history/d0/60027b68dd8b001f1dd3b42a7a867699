@@ -1,0 +1,104 @@
+package lab03;
+
+import java.util.Arrays;
+
+
+/**
+ * @author Bibash
+ */
+public class Stats {
+
+	int[] numbers; //Array Of Number
+	int count; //No of count 
+
+	
+	/**
+	 * @param value Value to add in the numbers array
+	 */
+	public void addValue(int value) {
+		numbers[count] = value;
+		count++;
+	}
+
+	/**
+	 * @return Return the length of numbers array
+	 */
+	public int getCount() {
+		return numbers.length;
+	}
+
+	/**
+	 * @return Return the maximum value of numbers array
+	 */
+	public int getMaxValue() {
+
+		int max = numbers[0];	
+
+		for (int i = 1; i < numbers.length; i++) {
+		if (numbers[i] > max)				
+			max = numbers[i];		
+		}
+	
+		return max;
+			}
+
+	/**
+	 * @return Return the minimum value of numbers array
+	 */
+	public int getMinValue() {
+		
+	int min = numbers[0]; 
+
+	for (int i = 1; i < numbers.length; i++) {
+
+		if (numbers[i] < min)
+					min = numbers[i];
+				}
+
+		return min;
+	}
+	
+	/**
+	 * @return Return the total length of numbers array
+	 */
+	public int getTotal() {
+		
+		int total = 0;
+		
+		// total all values within the array
+		for (int i = 0; i < numbers.length; i++) {
+			total += numbers[i];
+		}		return total;
+	}
+	
+	public double getAverage() {
+		
+		int x = 0;
+				for (int i = 0; i < numbers.length; i++) {
+			x += numbers[i];
+		}
+		
+		double y = x/(double)numbers.length;
+		
+		return y;
+	}
+
+	@Override
+	public String toString() {
+		return Arrays.toString(numbers);
+	}
+	
+
+	/**
+	 * @param capacity
+	 */
+	public Stats(int capacity) {
+		numbers = new int[capacity];
+	}
+	
+	
+	
+	
+	
+	
+}

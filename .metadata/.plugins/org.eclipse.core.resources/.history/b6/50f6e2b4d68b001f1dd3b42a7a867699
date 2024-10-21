@@ -1,0 +1,32 @@
+package week01;
+
+
+abstract public class Shape {
+
+ private int sides;
+ 
+ public int getSides() {
+ return sides;
+ }
+ 
+ public void setSides(int sides) {
+ this.sides = sides;// use this.sides to distinguish between parameter and attribute.
+ }
+ 
+ public double getArea() {
+	return 0.0;
+}
+ /**
+ * Constructor.
+ *
+ * @param sides the number of sides within the shape.
+ */
+ Shape(int sides) {
+ this.sides = sides;
+ }
+@Override
+public String toString() {
+	return "Shape [sides=" + sides + ", getSides()=" + getSides() + ", getArea()=" + getArea() + ", getClass()="
+			+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+}
+}
